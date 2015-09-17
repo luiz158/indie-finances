@@ -1,0 +1,27 @@
+<h1>Listing dres</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Adwords</th>
+    <th>Facebook add</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @dres.each do |dre| %>
+  <tr>
+    <td><%= dre.name %></td>
+    <td><%= dre.adwords %></td>
+    <td><%= dre.facebook_add %></td>
+    <td><%= link_to 'Show', dre %></td>
+    <td><%= link_to 'Edit', edit_dre_path(dre) %></td>
+    <td><%= link_to 'Destroy', dre, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Dre', new_dre_path %>
