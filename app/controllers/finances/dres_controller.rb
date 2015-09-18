@@ -5,15 +5,15 @@ module Finances
     end
 
     def show
-      @dre = Dre.find(params[:id])
+      @show = DreVO.new(params)
     end
 
     def new
-      @dre = Dre.new
+      @dre = NewDreVO.new
     end
 
     def edit
-      @dre = Dre.find(params[:id])
+      @resource = EditDreVO.new(params)
     end
 
     def create

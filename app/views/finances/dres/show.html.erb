@@ -1,20 +1,9 @@
 <p id="notice"><%= notice %></p>
-
+<% @show.attributes.each do |attribute| %>
 <p>
-  <b>Name:</b>
-  <%= @dre.name %>
+<b><%= attribute %>:</b>
+  <%= @show.send(attribute) %>
 </p>
-
-<p>
-  <b>Adwords:</b>
-  <%= @dre.adwords %>
-</p>
-
-<p>
-  <b>Facebook add:</b>
-  <%= @dre.facebook_add %>
-</p>
-
-
-<%= link_to 'Edit', edit_dre_path(@dre) %> |
+<% end %>
+<%= link_to 'Edit', edit_dre_path(@show.id) %> |
 <%= link_to 'Back', dres_path %>

@@ -1,3 +1,3 @@
 Finances::Engine.routes.draw do
-  resources :dres
+    resources :dres
 end

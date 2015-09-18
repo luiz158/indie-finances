@@ -1,28 +1,23 @@
-<%= form_for(@dre) do |f| %>
-  <% if @dre.errors.any? %>
+<%= form_for(@resource, :url => dre_path) do |f| %>
+  <% if @resource.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@dre.errors.count, "error") %> prohibited this dre from being saved:</h2>
 
       <ul>
-      <% @dre.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
+        <% @dre.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </div>
-  <div class="field">
-    <%= f.label :adwords %><br />
-    <%= f.number_field :adwords %>
-  </div>
-  <div class="field">
-    <%= f.label :facebook_add %><br />
-    <%= f.number_field :facebook_add %>
-  </div>
+  <% @resource.attributes.each do |attribute| %>
+    <div class="field">
+      <%= f.label attribute.to_sym %><br />
+      <%= f.text_field  attribute.to_sym %>
+    </div>
+  <% end %>
+
   <div class="actions">
     <%= f.submit %>
   </div>
