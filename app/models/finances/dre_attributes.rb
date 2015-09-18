@@ -3,6 +3,10 @@ module Finances
   module DreAttributes
 
     def attributes
+      DreAttributes.dre_fields
+    end
+
+    def self.dre_fields
       ["pagseguro",
       "adwords",
       "facebook_ad",
@@ -16,31 +20,8 @@ module Finances
       "paypal"]
     end
 
-    def pagseguro
-      @resource.pagseguro
-    end
-
-    def adwords
-
-    end
-
-    def facebook_ad
-    end
-    def facebook_paid_publications
-    end
-    def zencoder_dollars
-    end
-    def zencoder_reais
-    end
-    def heroku_dollars
-    end
-    def heroku_reais
-    end
-    def amazon_dollars
-    end
-    def amazon_reais
-    end
-    def paypal
+    self.dre_fields.each do |field_name|
+      delegate(field_name.to_sym, { :to => :"@resource" })
     end
   end
 
