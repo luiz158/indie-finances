@@ -31,8 +31,9 @@ module Finances
     def update
       @dre = Dre.find(params[:id])
 
+      puts params.inspect
       respond_to do |format|
-        if @dre.update_attributes(params[:dre])
+        if @dre.update_attributes(params[:edit_dre_vo])
           format.html { redirect_to @dre, notice: 'Dre was successfully updated.' }
         else
           format.html { render action: "edit" }
