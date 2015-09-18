@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(:version => 20150917114639) do
   create_table "finances_dres", :force => true do |t|
     t.string   "name"
     t.integer  "adwords"
-    t.integer  "facebook_add"
+    t.integer  "facebook_ad"
     t.integer  "facebook_paid_publications"
     t.integer  "zencoder_dollars"
     t.integer  "zencoder_reais"
