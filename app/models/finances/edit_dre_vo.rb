@@ -7,16 +7,10 @@ module Finances
     extend ActiveModel::Naming
     extend ActiveModel::Translation
 
+    include DreAttributes
+
     def initialize(params)
       @resource = Dre.find(params[:id])
-    end
-
-    def attributes
-      ["pagseguro"]
-    end
-
-    def pagseguro
-      @resource.pagseguro
     end
 
     def id
@@ -24,11 +18,15 @@ module Finances
     end
 
     def persisted?
-      @resource.persisted?
+      true
     end
 
     def errors
       []
+    end
+
+    def action_path
+      "/finances/dres/#{@resource.id}"
     end
   end
 end

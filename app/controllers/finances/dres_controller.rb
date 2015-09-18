@@ -9,7 +9,7 @@ module Finances
     end
 
     def new
-      @dre = NewDreVO.new
+      @resource = NewDreVO.new
     end
 
     def edit
@@ -33,7 +33,7 @@ module Finances
 
       puts params.inspect
       respond_to do |format|
-        if @dre.update_attributes(params[:edit_dre_vo])
+        if @dre.update_attributes(params[:dre])
           format.html { redirect_to @dre, notice: 'Dre was successfully updated.' }
         else
           format.html { render action: "edit" }

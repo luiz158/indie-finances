@@ -1,7 +1,7 @@
-<%= form_for(@resource, :url => dre_path) do |f| %>
+<%= form_for(@resource, :url => @resource.action_path, :as => "dre") do |f| %>
   <% if @resource.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@dre.errors.count, "error") %> prohibited this dre from being saved:</h2>
+      <h2><%= pluralize(@resource.errors.count, "error") %> prohibited this dre from being saved:</h2>
 
       <ul>
         <% @dre.errors.full_messages.each do |msg| %>
