@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(:version => 20150917114639) do
     t.integer  "pagseguro"
     t.integer  "amazon_dollars"
     t.integer  "amazon_reais"
+    t.integer  "paypal"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
