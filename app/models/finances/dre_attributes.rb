@@ -70,7 +70,8 @@ module Finances
     end
 
     def to_money_unit(value)
-      value.to_f / 100
+      amount = (value.to_f / 100)
+      amount == 0 ? 0 : sprintf("%.2f", amount).gsub(".",",")
     end
   end
 
