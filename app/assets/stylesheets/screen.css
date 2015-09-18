@@ -1,0 +1,661 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+img {
+  border-style: none;
+}
+
+body, p, ol, ul, td {
+  font-family: helvetica, verdana, arial, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+  color: #373535;
+}
+
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+.notice, .alert {
+  color: green;
+  padding:10px;
+  text-align:center;
+}
+
+.warning{
+  border: 2px solid #cb0e0e;
+  background-color: #fd9a9a;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.warning a {
+  text-decoration: underline;
+  text-shadow: none;
+}
+
+.admin-notice {
+  background-color: lightgrey;
+  padding: 10px;
+  margin-bottom:20px;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#error_explanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 0px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+ul {
+  list-style: none;
+}
+.center{
+  width: 980px;
+  margin: auto;
+}
+#header-wrapper {
+  background-image: -webkit-linear-gradient(#FAFAFA, #EAEAEA);
+  background-image: -moz-linear-gradient(#FAFAFA, #EAEAEA);
+  background-image: linear-gradient(#FAFAFA, #EAEAEA);
+  border-bottom: 1px solid #CACACA;
+}
+
+#header {
+  padding: 10px 0px;
+}
+
+.avatar {
+  width:30px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #373535;
+  text-shadow: 0.1em 0.1em white;
+}
+
+a:hover{
+  color: #ee3338;
+}
+
+textarea {
+  height:50px;
+  width: 250px;
+}
+
+input[type="text"], textarea {
+  border: 1px solid lightgrey;
+  padding:4px;
+  width:300px;
+  color: grey;
+}
+
+/* # TODO: Get rid of code duplication here */
+.standard-button{
+  border:1px solid black;
+  padding:6px;
+  text-shadow: -1px -1px 0 #333;
+  color:white;
+  font-weight: bold;
+  
+  background-color: #ee3338;
+  background-image: -webkit-linear-gradient(top, rgb(144, 144, 144), rgb(63, 63, 63));
+  background-image: -moz-linear-gradient(top, rgb(144, 144, 144), rgb(63, 63, 63));
+  background-image: linear-gradient(top, rgb(144, 144, 144), rgb(63, 63, 63));
+
+  cursor: pointer;
+  border-radius: 3px;
+  line-height:40px;
+}
+
+.standard-button:hover {
+  color:white;
+  background-image: -webkit-linear-gradient(#ee3338, #9d2023);
+  background-image: -moz-linear-gradient(#ee3338, #9d2023);
+  background-image: linear-gradient(#ee3338, #9d2023);
+}
+
+input[type="submit"] {
+  border:1px solid black;
+  padding:6px;
+  text-shadow: -1px -1px 0 #333;
+  color:white;
+  font-weight: bold;
+
+  background-color: #ee3338;
+  background-image: -webkit-linear-gradient(top, rgb(144, 144, 144), rgb(63, 63, 63));
+  background-image: -moz-linear-gradient(top, rgb(144, 144, 144), rgb(63, 63, 63));
+  background-image: linear-gradient(top, rgb(144, 144, 144), rgb(63, 63, 63));
+
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+input[type="submit"]:hover{
+  background-image: -webkit-linear-gradient(#ee3338, #9d2023);
+  background-image: -moz-linear-gradient(#ee3338, #9d2023);
+  background-image: linear-gradient(#ee3338, #9d2023);
+}
+
+p {
+  font-size: 11pt;
+}
+
+#menu{
+  width: 314px;
+  display: inline-block;
+  height:20px;
+  vertical-align:middle;
+  padding-bottom:12px;
+  padding-left:60px;
+}
+
+#session-info {
+  width: 160px;
+  margin-left:120px;
+  display: inline-block;
+}
+
+#content {
+  padding:20px 0px;
+}
+
+h1 {
+  padding:5px;
+}
+
+#freatured-video {
+  background-color: grey;
+  padding:15px;
+  margin:10px;
+  width:360px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#signup-widget {
+  background-color: grey;
+  padding: 10px;
+  margin:10px;
+  width:360px;
+  display: inline-block;
+}
+
+#signup-widget input{
+  margin: 5px;
+}
+
+#footer-wrapper{
+  background-color: lightgrey;
+  height: 100px;
+  text-align: center;
+}
+
+#footer-wrapper li{
+  display: inline-block;
+}
+
+#home {
+  height:400px;
+}
+
+li.level{
+  border: 1px solid grey;
+  margin:15px 0px;
+  padding: 15px;
+  background-color: #e8e8e8;
+  border-radius: 5px;
+}
+
+.lessons{
+  border-top: 2px solid grey;
+
+  margin:20px;
+}
+
+.lessons li {
+  padding:5px;
+}
+
+.lesson-split {
+  display: inline-block; vertical-align: top; padding:20px
+}
+
+.marker {
+  width: 12px;
+}
+
+.marker-opened {
+  width: 12px;
+  transform:rotate(90deg); /* IE 9 */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+  -o-transform:rotate(90deg); /* Opera */
+}
+
+.level-thumb{
+  height:100px;
+  width:100px;
+  vertical-align:top;
+}
+
+.level-text{
+  width: 800px;
+  display: inline-block;
+}
+
+li.lecture{
+  margin: 20px 0px;
+}
+
+.lecture-text {
+  width: 600px;
+}
+
+div#lecture-menu{
+  width:240px;
+  border: 1px solid black;
+  display: inline-block;
+  padding: 10px;
+}
+
+#other-gravinas {
+  border: 1px solid lightgrey;
+  width:250px;
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.top-bar {
+  padding: 10px;
+  color: grey;
+  border-bottom:1px solid lightgrey;
+  background-image: -webkit-linear-gradient(#fafafa, #eaeaea);
+  background-image: -moz-linear-gradient(#fafafa, #eaeaea);
+  background-image: linear-gradient(#fafafa, #eaeaea);
+
+}
+
+#other-gravinas li{
+  border-bottom:1px solid lightgrey;
+  padding: 10px;
+}
+
+#video-limit-warning {
+  color: red;
+  font-weight: bold;
+}
+
+#new-gravina{
+  padding: 10px;
+  margin-top: 10px;
+}
+
+#main-gravina {
+  width: 640px;
+  display: inline-block;
+  vertical-align: top;
+}
+
+#main-gravina .top{
+  padding:20px;
+  background-color:#e8e8e8;
+}
+
+p#description{
+  padding:15px 0px;
+}
+
+#gravinas-profile{
+  width: 250px;
+  display:inline-block;
+  padding:20px;
+}
+
+#gravinas-info {
+
+}
+
+#gravinas-info tbody{
+  text-align:left;
+}
+
+.gravina-tab{
+  padding:10px;
+  display: inline-block;
+  vertical-align:top;
+}
+
+#original {
+  width: 400px;
+}
+
+.highlighted{
+  background-color:#e8e8e8;
+}
+
+#response{
+  width:220px;
+  height:36px;
+  font-size:8pt;
+}
+
+#comments {
+  padding:10px 0px;
+  margin-top:10px;
+}
+
+#comments ul {
+  margin-bottom:20px;
+}
+
+#comments ul li {
+  margin: 15px 0px;
+}
+
+#comments ul li div {
+  width: 560px;
+}
+
+#comments h2{
+  border-bottom: 2px solid #373535;
+}
+
+#comments img{
+  width: 50px;
+  vertical-align:top;
+}
+
+.comment {
+  position:relative;
+  padding: 2px;
+  margin-left: 9px;
+  background-color: #fbfbfb;
+  width:420px;
+  border: 1px solid #CACACA;;
+  display:inline-block;
+  vertical-align: top;
+  outline: solid 2px #e0dede;
+}
+
+.comment:after {
+  content: ' ';
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 8px;
+  left: -26px;
+  border: 12px solid; border-color: transparent #e0dede transparent transparent;
+}
+
+.inline {
+  display: inline-block;
+}
+
+#important-info {
+  margin-right:40px;
+}
+
+#profile-form {
+  padding:20px;
+}
+
+#student-info-left {
+  width:400px;
+  display: inline-block;
+  vertical-align:top;
+}
+
+#less-important-info {
+  background-color: #e8e8e8;
+  padding: 20px;
+}
+
+
+#less-important-info img{
+  margin:0 10px;
+  vertical-align:top;
+}
+#student-info-message{
+  padding-bottom: 20px;
+}
+
+#student-info-message h2, #student-info-message p {
+  line-height: 1.5;
+}
+
+#lesson{
+  width:600px;  
+  padding:20px;
+  display: inline-block;
+}
+
+#lesson-content {
+  background-color: white;
+  margin-top:20px;
+  line-height:2;
+}
+
+div#send-gravina {
+  width:200px;
+  display: inline-block;
+  vertical-align:top;
+  padding:50px;
+}
+
+.profile-field {
+  margin-bottom:10px;
+}
+
+p.event-time {
+  color: grey;
+  font-size: 11px;
+}
+
+#events ul {
+  width:650px;
+  display:inline-block;
+  vertical-align:top;
+}
+
+#events .event img {
+  max-width:80px;
+}
+
+.event-body {
+  display:inline-block; vertical-align:top; padding:10px 10px; width: 530px;
+}
+
+#events .event {
+  border-top: 1px solid;
+  border-color: lightgrey;
+}
+
+#last-videos-box img {
+  vertical-align:top;
+}
+
+#last-videos-box {
+  display:inline-block;
+  overflow:hidden;
+  width:300px;
+  padding:10px;
+}
+
+#last-videos-box li{
+  margin:5px 0px;
+}
+
+.last-video-info {
+  display:inline-block;
+}
+
+#subscription, #notifications {
+  margin: 20px 0px;
+}
+
+#related-gravina {
+  margin-top: 10px;
+}
+
+#related-gravina p{
+  font-size: 13px;
+  padding:0px;
+}
+
+.related-link {
+  height:50px;
+  border: 2px solid grey;
+}
+
+.side-info {
+  display:inline-block;
+  vertical-align:top;
+  width:120px;
+}
+
+.product {
+  display: inline-block;
+  vertical-align:top;
+  margin: 0px 10px;
+  padding:10px;
+}
+
+#subscription-email {
+  border: 1px solid grey;
+  background-color:lightgrey;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold
+}
+
+/* Admin */
+table.styled td{
+  border: 1px solid white;
+  padding: 8px;
+}
+
+table.styled tr{
+  background: #d4d4d4;
+}
+table.styled tr:hover{
+  background: #cbc4c4;
+}
+
+table.styled tr.not-responded {
+  background: orange;
+}
+
+table.styled tr.not-responded a{
+  color: white;
+  text-shadow:none;
+}
+
+.new-item{
+  border: 1px solid black;
+  padding: 10px;
+  width: 400px;
+  background-color: #b3afaf;
+}
+
+.item-list{
+  border: 1px solid black;
+  padding: 10px;
+}
+
+#teacher-menu {
+  padding: 4px;
+}
+
+#teacher-menu ul li{
+  display: inline-block;
+  padding: 0 10px;
+  font-size:12px;
+}
+
+#level-lessons {
+  border:1px solid black;
+  background: lightgrey;
+  padding: 10px;
+}
+
+#level-header{
+  padding: 10px;
+}
+
+#lessons-list {
+  background-color:white;
+  padding:5px;
+}
+
+#new-lesson{
+  background:white;
+  padding:10px;
+}
+
+.big-area {
+  height:600px;
+  width: 800px;
+}
+
+.cal-header{
+  font-size: 0;
+}
+
+.cal-header-item {
+  display:inline-block;
+  background-color:grey;
+  font-size: 13px;
+}
+.cal-header-item:nth-child(odd) {
+  background-color:lightgrey;
+}
+
+.subscription-period {
+  display:inline-block;
+  position:relative;
+  color:white;
+  background-color: #24765e;
+}
+
+.student-email{
+  width:250px;
+  display:inline-block;
+  border-top:1px solid black;
+}
+
+.period {
+  width:396px; display:inline-block; border-top: 1px solid black; margin-left:-5px; position: relative; top: -13px;
+}
+
+.subscription-wraper{
+  position:absolute
+}
