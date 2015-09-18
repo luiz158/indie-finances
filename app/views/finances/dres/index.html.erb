@@ -2,7 +2,7 @@
 
 <table>
   <tr>
-    <% @dres.first.attributes.each do |attributes| %>
+    <% @index.dres.first.attributes.each do |attributes| %>
       <th><%= attributes%></th>
     <% end %>
     <th></th>
@@ -10,7 +10,7 @@
     <th></th>
   </tr>
 
-<% @dres.each do |dre| %>
+<% @index.dres.each do |dre| %>
   <tr>
     <% dre.attributes.each do |attribute| %>
       <td><%= dre.send(attribute) %></td>
