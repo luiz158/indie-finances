@@ -1,7 +1,7 @@
 module Finances
   class DresController < ApplicationController
     def index
-      @dres = Dre.all
+      @dres = IndexDreVO.all
     end
 
     def show

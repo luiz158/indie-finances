@@ -2,9 +2,9 @@
 
 <table>
   <tr>
-    <th>Name</th>
-    <th>Adwords</th>
-    <th>Facebook ad</th>
+    <% @dres.first.attributes.each do |attributes| %>
+      <th><%= attributes%></th>
+    <% end %>
     <th></th>
     <th></th>
     <th></th>
@@ -12,12 +12,12 @@
 
 <% @dres.each do |dre| %>
   <tr>
-    <td><%= dre.name %></td>
-    <td><%= dre.adwords %></td>
-    <td><%= dre.facebook_ad %></td>
-    <td><%= link_to 'Show', dre %></td>
-    <td><%= link_to 'Edit', edit_dre_path(dre) %></td>
-    <td><%= link_to 'Destroy', dre, confirm: 'Are you sure?', method: :delete %></td>
+    <% dre.attributes.each do |attribute| %>
+      <td><%= dre.send(attribute) %></td>
+    <% end %>
+    <td><%= link_to 'Show', dre_path(dre.id) %></td>
+    <td><%= link_to 'Edit', edit_dre_path(dre.id) %></td>
+    <td><%= link_to 'Destroy', dre_path(dre.id), confirm: 'Are you sure?', method: :delete %></td>
   </tr>
 <% end %>
 </table>

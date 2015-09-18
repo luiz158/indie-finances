@@ -7,7 +7,8 @@ module Finances
     end
 
     def self.dre_fields
-      ["pagseguro",
+      ["name",
+      "pagseguro",
       "adwords",
       "facebook_ad",
       "facebook_paid_publications",

@@ -1,6 +1,7 @@
 module Finances
   class DreVO
 
+    extend ActiveModel::Naming
     include DreAttributes
 
     def initialize(params)
