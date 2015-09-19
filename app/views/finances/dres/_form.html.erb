@@ -14,7 +14,11 @@
   <% @resource.attributes.each do |attribute| %>
     <div class="field">
       <%= f.label attribute.to_sym %><br />
-      <%= f.text_field  attribute.to_sym %>
+      <% if attribute == "name" %>
+        <%= f.text_field  attribute.to_sym %>
+      <% else %>
+        <%= f.text_field  attribute.to_sym, :class => "currency" %>
+      <% end %>
     </div>
   <% end %>
 

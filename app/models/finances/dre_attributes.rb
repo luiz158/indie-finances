@@ -2,6 +2,8 @@ module Finances
 
   module DreAttributes
 
+    include ActionView::Helpers::NumberHelper
+
     def attributes
       DreAttributes.dre_fields
     end
@@ -22,7 +24,7 @@ module Finances
     end
 
     def name
-      to_money_unit(@resource.name)
+      @resource.name
     end
 
     def pagseguro
@@ -71,7 +73,11 @@ module Finances
 
     def to_money_unit(value)
       amount = (value.to_f / 100)
-      amount == 0 ? 0 : sprintf("%.2f", amount).gsub(".",",")
+      if amount == 0
+        0
+      else
+       number_to_currency(amount, unit: "", separator: ",", delimiter: ".")
+      end
     end
   end
 
