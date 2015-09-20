@@ -29,7 +29,8 @@ module Finances
        "pagseguro",
        "paypal",
        "amazon_dollars",
-       "amazon_reais"
+       "amazon_reais",
+       "revenues"
       ]
     end
 
@@ -79,6 +80,10 @@ module Finances
 
     def paypal
       to_money_unit(@resource.paypal)
+    end
+
+    def revenues
+      to_money_unit(@resource.revenues)
     end
 
     def total_cost
