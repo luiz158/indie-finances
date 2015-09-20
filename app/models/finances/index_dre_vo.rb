@@ -15,5 +15,8 @@ module Finances
       dres
     end
 
+    def attributes
+      DreAttributes.dre_fields
+    end
   end
 end
