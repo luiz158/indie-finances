@@ -12,6 +12,10 @@ module Finances
       ["total_cost"]
     end
 
+    def dre_fields
+      DreAttributes.dre_fields
+    end
+
     def self.dre_fields
       [
        "name",
