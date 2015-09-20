@@ -13,6 +13,7 @@ class CreateFinancesDres < ActiveRecord::Migration
       t.integer :amazon_dollars
       t.integer :amazon_reais
       t.integer :paypal
+      t.integer :revenues
 
       t.timestamps
     end
