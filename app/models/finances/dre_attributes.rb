@@ -9,18 +9,20 @@ module Finances
     end
 
     def self.dre_fields
-      ["name",
-       "pagseguro",
+      [
+       "name",
        "adwords",
-       "facebook_ad",
        "facebook_paid_publications",
+       "facebook_ad",
        "zencoder_dollars",
        "zencoder_reais",
        "heroku_dollars",
        "heroku_reais",
+       "pagseguro",
+       "paypal",
        "amazon_dollars",
-       "amazon_reais",
-       "paypal"]
+       "amazon_reais"
+      ]
     end
 
     def name
