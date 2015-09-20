@@ -5,7 +5,11 @@ module Finances
     include ActionView::Helpers::NumberHelper
 
     def attributes
-      DreAttributes.dre_fields
+      DreAttributes.dre_fields | extra_fields
+    end
+
+    def extra_fields
+      ["total_cost"]
     end
 
     def self.dre_fields
@@ -71,6 +75,23 @@ module Finances
 
     def paypal
       to_money_unit(@resource.paypal)
+    end
+
+    def total_cost
+      total =  [
+       "adwords",
+       "facebook_paid_publications",
+       "facebook_ad",
+       "zencoder_reais",
+       "heroku_reais",
+       "pagseguro",
+       "paypal",
+       "amazon_reais"
+       ].sum do |field|
+         @resource.send(field)
+       end
+
+       to_money_unit(total)
     end
 
     def to_money_unit(value)
