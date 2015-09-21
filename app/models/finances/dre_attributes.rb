@@ -9,7 +9,7 @@ module Finances
     end
 
     def self.extra_fields
-      ["total_cost"]
+      ["total_cost", "profit"]
     end
 
     def dre_fields
@@ -87,20 +87,30 @@ module Finances
     end
 
     def total_cost
-      total =  [
-       "adwords",
-       "facebook_paid_publications",
-       "facebook_ad",
-       "zencoder_reais",
-       "heroku_reais",
-       "pagseguro",
-       "paypal",
-       "amazon_reais"
-       ].sum do |field|
-         @resource.send(field)
-       end
+       to_money_unit(raw_total_cost)
+    end
 
-       to_money_unit(total)
+    def raw_total_cost
+      [
+        "adwords",
+        "facebook_paid_publications",
+        "facebook_ad",
+        "zencoder_reais",
+        "heroku_reais",
+        "pagseguro",
+        "paypal",
+        "amazon_reais"
+      ].sum do |field|
+        @resource.send(field)
+       end
+    end
+
+    def raw_profit
+      @resource.revenues - raw_total_cost
+    end
+
+    def profit
+      to_money_unit(raw_profit)
     end
 
     def to_money_unit(value)
