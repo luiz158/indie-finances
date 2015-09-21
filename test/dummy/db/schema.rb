@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(:version => 20150917114639) do
 
-  create_table "finances_dres", :force => true do |t|
+  create_table "finances_income_statements", :force => true do |t|
     t.string   "name"
     t.integer  "adwords"
     t.integer  "facebook_ad"

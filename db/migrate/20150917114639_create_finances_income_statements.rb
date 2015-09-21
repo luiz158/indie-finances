@@ -1,6 +1,6 @@
-class CreateFinancesDres < ActiveRecord::Migration
+class CreateFinancesIncomeStatements < ActiveRecord::Migration
   def change
-    create_table :finances_dres do |t|
+    create_table :finances_income_statements do |t|
       t.string :name
       t.integer :adwords
       t.integer :facebook_ad
