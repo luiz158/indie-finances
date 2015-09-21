@@ -2,3 +2,5 @@ Mecanismo para adicioanr titulos humanos às colunas
 adicionar suporte à twitter bootstrap no html
 tira o if do form
 passar conf do controller para o host app?
+remover a necessidade de usar app_name nos controllers do host
+renomear o DRE
