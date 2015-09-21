@@ -16,7 +16,7 @@ module Finances
     end
 
     def attributes
-      DreAttributes.dre_fields | ["Custo total"]
+      DreAttributes.dre_fields | DreAttributes.extra_fields
     end
   end
 end

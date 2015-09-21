@@ -5,10 +5,10 @@ module Finances
     include ActionView::Helpers::NumberHelper
 
     def attributes
-      DreAttributes.dre_fields | extra_fields
+      DreAttributes.dre_fields | DreAttributes.extra_fields
     end
 
-    def extra_fields
+    def self.extra_fields
       ["total_cost"]
     end
 
