@@ -1,5 +1,5 @@
 module Finances
-  class CreateEntryPage
+  class CreateEntry
 
     def initialize(params)
       @entry = Entry.new(params[:entry])

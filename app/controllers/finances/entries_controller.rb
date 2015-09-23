@@ -9,7 +9,7 @@ module Finances
     end
 
     def create
-      @resource = CreateEntryPage.new(params)
+      @resource = CreateEntry.new(params)
       @resource.save
 
       redirect_to entries_path

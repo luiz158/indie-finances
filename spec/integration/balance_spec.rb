@@ -8,7 +8,7 @@ module Finances
 
       Delorean.time_travel_to("09-22-2015")
 
-      entry1 = CreateEntryPage.new(params1)
+      entry1 = CreateEntry.new(params1)
       entry1.save
 
       balance = IndexEntryPage.new
@@ -25,7 +25,7 @@ module Finances
       params2 = Hash.new
       params2[:entry] = { amount: -18, description: "Retirada de prolabore." }
 
-      entry2 = CreateEntryPage.new(params2)
+      entry2 = CreateEntry.new(params2)
       entry2.save
 
       balance2 = IndexEntryPage.new
