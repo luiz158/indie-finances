@@ -38,6 +38,9 @@ GEM
       multi_json (~> 1.0)
     arel (2.2.3)
     builder (3.0.4)
+    chronic (0.10.2)
+    delorean (2.1.0)
+      chronic
     diff-lcs (1.2.5)
     erubis (2.7.0)
     hike (1.2.3)
@@ -117,6 +120,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  delorean
   finances!
   jquery-rails (~> 3.1.1)
   rspec
