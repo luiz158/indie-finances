@@ -28,14 +28,16 @@ module Finances
       entry2 = CreateEntryPage.new(params2)
       entry2.save
 
+      balance2 = ShowBalancePage.new
+
       expected_balance2 = [
         { date: "22-09-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
         { date: "22-09-2015", amount: "27", description: "", kind: "patrimony" },
-        { date: "25-09-2015", amount: "-18", description: "Resultado de Novembro", kind: "entry" },
+        { date: "25-09-2015", amount: "-18", description: "Retirada de prolabore.", kind: "entry" },
         { date: "25-09-2015", amount: "9", description: "", kind: "patrimony" }
       ]
 
-      assert_equal(expected_balance2, balance.rows)
+      assert_equal(expected_balance2, balance2.rows)
     end
   end
 end
