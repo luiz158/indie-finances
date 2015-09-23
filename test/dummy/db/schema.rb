@@ -11,7 +11,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20150917114639) do
+ActiveRecord::Schema.define(:version => 20150923115029) do
+
+  create_table "finances_entries", :force => true do |t|
+    t.integer  "amount"
+    t.datetime "date"
+    t.string   "description"
+  end
 
   create_table "finances_income_statements", :force => true do |t|
     t.string   "name"
