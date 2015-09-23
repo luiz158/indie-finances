@@ -1,5 +1,5 @@
 module Finances
-  class ShowBalance
+  class ShowBalancePage
     def rows
       []
     end

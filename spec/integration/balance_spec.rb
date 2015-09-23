@@ -5,12 +5,12 @@ module Finances
     it "builds the balance for given entries" do
       params1 = Hash.new
       params1[:entry] = { credit: 27, debit: 0, date: DateTime.parse("19-02-2015"), description: "Resultado de Novembro" }
-      entry1 = CreateEntry.new(params1)
+      entry1 = CreateEntryPage.new(params1)
       entry1.save
 
-      balance = ShowBalance.new
+      balance = ShowBalancePage.new
 
-      class FakeShowBalance
+      class FakeShowBalancePage
         def rows
           [
             { date: "09-22-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
@@ -18,7 +18,7 @@ module Finances
           ]
         end
       end
-      expected_balance = FakeShowBalance.new
+      expected_balance = FakeShowBalancePage.new
 
       assert_equal(expected_balance.rows, balance.rows)
     end

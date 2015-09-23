@@ -1,5 +1,5 @@
 module Finances
-  class CreateEntry
+  class CreateEntryPage
 
     def initialize(params)
     end
