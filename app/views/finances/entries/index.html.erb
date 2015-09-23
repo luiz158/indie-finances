@@ -1,0 +1,23 @@
+<table class="styled">
+  <caption>Balanço</caption>
+  <tr>
+    <th>Data</th>
+    <th>Valor</th>
+    <th>Descrição</th>
+  </tr>
+  <% @balance.rows.each do |row| %>
+    <tr>
+      <td>
+      <%= row[:date] %>
+      </td>
+      <td>
+      <%= row[:amount] %>
+      </td>
+      <td>
+      <%= row[:description] %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+
+<%= link_to 'Adicionar Movimentação', new_entry_path %>

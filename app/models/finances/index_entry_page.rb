@@ -1,5 +1,5 @@
 module Finances
-  class ShowBalancePage
+  class IndexEntryPage
     def rows
       lines = []
       patrimony = 0

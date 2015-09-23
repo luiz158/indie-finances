@@ -11,7 +11,7 @@ module Finances
       entry1 = CreateEntryPage.new(params1)
       entry1.save
 
-      balance = ShowBalancePage.new
+      balance = IndexEntryPage.new
 
       expected_balance1 = [
         { date: "22-09-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
@@ -28,7 +28,7 @@ module Finances
       entry2 = CreateEntryPage.new(params2)
       entry2.save
 
-      balance2 = ShowBalancePage.new
+      balance2 = IndexEntryPage.new
 
       expected_balance2 = [
         { date: "22-09-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
