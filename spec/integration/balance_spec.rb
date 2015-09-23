@@ -4,7 +4,7 @@ module Finances
   describe "Balance" do
     it "builds the balance for given entries" do
       params1 = Hash.new
-      params1[:entry] = { credit: 27, debit: 0, description: "Resultado de Novembro" }
+      params1[:entry] = { amount: 27, description: "Resultado de Novembro" }
 
       Delorean.time_travel_to("09-22-2015")
 
