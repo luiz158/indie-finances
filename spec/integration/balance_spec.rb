@@ -1,6 +1,15 @@
 require 'rails_helper'
 
 module Finances
+  class FakeShowBalancePage
+    def rows
+      [
+        { date: "09-22-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
+        { date: "09-22-2015", amount: "27", description: "", kind: "balance" }
+      ]
+    end
+  end
+
   describe "Balance" do
     it "builds the balance for given entries" do
       params1 = Hash.new
@@ -13,14 +22,6 @@ module Finances
 
       balance = ShowBalancePage.new
 
-      class FakeShowBalancePage
-        def rows
-          [
-            { date: "09-22-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
-            { date: "09-22-2015", amount: "27", description: "", kind: "balance" }
-          ]
-        end
-      end
       expected_balance = FakeShowBalancePage.new
 
       assert_equal(expected_balance.rows, balance.rows)
