@@ -13,12 +13,29 @@ module Finances
 
       balance = ShowBalancePage.new
 
-      expected_balance = [
+      expected_balance1 = [
         { date: "22-09-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
         { date: "22-09-2015", amount: "27", description: "", kind: "patrimony" }
       ]
 
-      assert_equal(expected_balance, balance.rows)
+      assert_equal(expected_balance1, balance.rows)
+
+      Delorean.time_travel_to("09-25-2015")
+
+      params2 = Hash.new
+      params2[:entry] = { amount: -18, description: "Retirada de prolabore." }
+
+      entry2 = CreateEntryPage.new(params2)
+      entry2.save
+
+      expected_balance2 = [
+        { date: "22-09-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
+        { date: "22-09-2015", amount: "27", description: "", kind: "patrimony" },
+        { date: "25-09-2015", amount: "-18", description: "Resultado de Novembro", kind: "entry" },
+        { date: "25-09-2015", amount: "9", description: "", kind: "patrimony" }
+      ]
+
+      assert_equal(expected_balance2, balance.rows)
     end
   end
 end
