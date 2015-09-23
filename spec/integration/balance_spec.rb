@@ -14,7 +14,7 @@ module Finances
         def rows
           [
             { date: "09-22-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
-            { date: "09-22-2015", amount: "27", patrimony: 27, description: "", kind: "balance" }
+            { date: "09-22-2015", amount: "27", description: "", kind: "balance" }
           ]
         end
       end
