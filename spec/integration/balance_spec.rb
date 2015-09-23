@@ -14,8 +14,8 @@ module Finances
       balance = ShowBalancePage.new
 
       expected_balance = [
-        { date: "09-22-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
-        { date: "09-22-2015", amount: "27", description: "", kind: "balance" }
+        { date: "22-09-2015", amount: "27", description: "Resultado de Novembro", kind: "entry" },
+        { date: "22-09-2015", amount: "27", description: "", kind: "patrimony" }
       ]
 
       assert_equal(expected_balance, balance.rows)
