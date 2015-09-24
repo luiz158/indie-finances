@@ -12,7 +12,7 @@ module Finances
 
     def initialize(params)
       @resource = Dre.find(params[:id])
-      @resource.update_attributes(sanitized_params(params))
+      @resource.update_attributes(sanitized_params(params[:dre]))
     end
 
     def id
