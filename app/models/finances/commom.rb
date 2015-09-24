@@ -4,7 +4,7 @@ module Finances
       sanitized = params.clone
       sanitized.each do |k, v|
 
-        # TODO: What if the user define a differente name for the anme field?
+        # TODO: What if the user defines a different name for the name field?
         # TODO: description is used by the entry model
         unless k == "name" || k == "description"
           sanitized[k] = v.gsub(",", "").gsub(".","")
