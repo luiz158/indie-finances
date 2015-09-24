@@ -10,7 +10,7 @@ module Finances
     extend ActiveModel::Translation
 
     include DreAttributes
-    include DreCommom
+    include Commom
 
     def initialize(params)
       @resource = Dre.new

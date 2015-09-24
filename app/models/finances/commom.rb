@@ -1,5 +1,5 @@
 module Finances
-  module DreCommom
+  module Commom
     def sanitized_params(params)
       sanitized = params.clone
       sanitized[:dre].each do |k, v|
