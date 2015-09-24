@@ -8,7 +8,7 @@ module Finances
 
     def save
       #TODO: Add validation here.
-      raise if @entry.amount.nil?
+      raise "This Entry has amount nil." if @entry.amount.nil?
       @entry.save
     end
 
