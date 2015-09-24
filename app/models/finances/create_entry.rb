@@ -1,8 +1,10 @@
 module Finances
   class CreateEntry
 
+    include Commom
+
     def initialize(params)
-      @entry = Entry.new(params[:entry])
+      @entry = Entry.new(sanitized_params(params[:entry]))
       @entry.date = DateTime.now
     end
 

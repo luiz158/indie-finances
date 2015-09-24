@@ -2,7 +2,7 @@ module Finances
 
   module DreAttributes
 
-    include ActionView::Helpers::NumberHelper
+    include MoneyHelper
 
     def attributes
       DreAttributes.dre_fields | DreAttributes.extra_fields
@@ -111,15 +111,6 @@ module Finances
 
     def profit
       to_money_unit(raw_profit)
-    end
-
-    def to_money_unit(value)
-      amount = (value.to_f / 100)
-      if amount == 0
-        0
-      else
-       number_to_currency(amount, unit: "", separator: ",", delimiter: ".")
-      end
     end
   end
 

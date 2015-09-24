@@ -14,7 +14,7 @@ module Finances
 
     def initialize(params)
       @resource = Dre.new
-      @resource.update_attributes(sanitized_params(params))
+      @resource.update_attributes(sanitized_params(params[:dre]))
     end
 
     def persisted?
