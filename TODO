@@ -5,3 +5,4 @@ passar conf do controller para o host app?
 remover a necessidade de usar app_name nos controllers do host
 renomear o DRE
 adcionar me e ano ao income_statement (para facilitar leitura quando for contatenar o balanço)
+ids nas tabelas né
