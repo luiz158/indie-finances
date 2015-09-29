@@ -14,5 +14,12 @@ module Finances
 
       redirect_to entries_path
     end
+
+    def destroy
+      @entry = Entry.find(params[:id])
+      @entry.destroy
+
+      redirect_to entries_path
+    end
   end
 end

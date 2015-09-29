@@ -14,7 +14,7 @@ module Finances
       balance = IndexEntryPage.new
 
       expected_balance1 = [
-        { date: "22-09-2015", amount: "27,13", description: "Resultado de Novembro", kind: "entry" },
+        { date: "22-09-2015", amount: "27,13", description: "Resultado de Novembro", :id => 1, kind: "entry" },
         { date: "22-09-2015", amount: "27,13", description: "", kind: "patrimony" }
       ]
 
@@ -31,9 +31,9 @@ module Finances
       balance2 = IndexEntryPage.new
 
       expected_balance2 = [
-        { date: "22-09-2015", amount: "27,13", description: "Resultado de Novembro", kind: "entry" },
+        { date: "22-09-2015", amount: "27,13", description: "Resultado de Novembro", :id => 1, kind: "entry" },
         { date: "22-09-2015", amount: "27,13", description: "", kind: "patrimony" },
-        { date: "25-09-2015", amount: "-18,05", description: "Retirada de prolabore.", kind: "entry" },
+        { date: "25-09-2015", amount: "-18,05", description: "Retirada de prolabore.", :id => 2, kind: "entry" },
         { date: "25-09-2015", amount: "9,08", description: "", kind: "patrimony" }
       ]
 
