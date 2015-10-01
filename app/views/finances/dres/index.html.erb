@@ -3,7 +3,7 @@
 <table class="styled">
    <tr>
     <% @index.attributes.each do |attributes| %>
-      <th><%= attributes%></th>
+      <th><%= attributes.values.first %></th>
     <% end %>
     <th></th>
     <th></th>
@@ -13,7 +13,7 @@
 <% @index.dres.each do |dre| %>
   <tr>
     <% dre.attributes.each do |attribute| %>
-      <td><%= dre.send(attribute) %></td>
+      <td><%= dre.send(attribute.keys.first) %></td>
     <% end %>
     <td><%= link_to 'Show', dre_path(dre.id) %></td>
     <td><%= link_to 'Edit', edit_dre_path(dre.id) %></td>

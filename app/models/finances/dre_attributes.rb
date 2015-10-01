@@ -1,3 +1,4 @@
+#encoding: utf-8
 module Finances
 
   module DreAttributes
@@ -9,7 +10,10 @@ module Finances
     end
 
     def self.extra_fields
-      ["total_cost", "profit"]
+      [
+        { "total_cost" => "Custo total" },
+        { "profit" => "Resultado" }
+      ]
     end
 
     def dre_fields
@@ -18,19 +22,19 @@ module Finances
 
     def self.dre_fields
       [
-       "name",
-       "adwords",
-       "facebook_paid_publications",
-       "facebook_ad",
-       "zencoder_dollars",
-       "zencoder_reais",
-       "heroku_dollars",
-       "heroku_reais",
-       "pagseguro",
-       "paypal",
-       "amazon_dollars",
-       "amazon_reais",
-       "revenues"
+       { "name" => "Mês" },
+       { "adwords" => "Google AdWords" },
+       { "facebook_paid_publications" => "Alavancar Publicação (fb)" },
+       { "facebook_ad" => "Facebook Ads" },
+       { "zencoder_dollars" => "Zencoder ($)" },
+       { "zencoder_reais" => "Zencoder (R$)" },
+       { "heroku_dollars" => "Heroku ($)" },
+       { "heroku_reais" => "Heroku (R$)" },
+       { "pagseguro" => "pagSeguro" },
+       { "paypal" => "Paypal" },
+       { "amazon_dollars" => "Amazon ($)" },
+       { "amazon_reais" => "Amazon (R$)" },
+       { "revenues" => "Faturamento" }
       ]
     end
 
