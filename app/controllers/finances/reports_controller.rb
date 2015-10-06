@@ -12,7 +12,7 @@ module Finances
     def create
       @report = Report.new(params[:report])
       @current = ReportPage.new
-      @report.snapshot = render_to_string("current")
+      @report.snapshot = render_to_string("current", :layout => "report")
       @report.save
 
       redirect_to reports_path
@@ -25,7 +25,7 @@ module Finances
 
     def current
       @current = ReportPage.new
-      render :layout => false
+      render :layout => "report"
     end
 
   end
