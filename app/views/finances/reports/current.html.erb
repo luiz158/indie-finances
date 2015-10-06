@@ -1,0 +1,7 @@
+<p>
+<%= @current.text %>
+</p>
+
+<%= render "finances/shared/statments_table", :statement => @current.statements %>
+<%= render "finances/shared/entries_table", :balance => @current.balance %>
+
