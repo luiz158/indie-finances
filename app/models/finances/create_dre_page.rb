@@ -1,5 +1,7 @@
 module Finances
-  class EditDreVO
+
+  class CreateDrePage
+
     extend ActiveSupport::Concern
     include ActiveModel::Validations
     include ActiveModel::Conversion
@@ -8,17 +10,15 @@ module Finances
     extend ActiveModel::Translation
 
     include DreAttributes
+    include Commom
 
     def initialize(params)
-      @resource = Dre.find(params[:id])
-    end
-
-    def id
-      @resource.id
+      @resource = Dre.new
+      @resource.update_attributes(sanitized_params(params[:dre]))
     end
 
     def persisted?
-      true
+      false
     end
 
     def errors
@@ -26,8 +26,9 @@ module Finances
     end
 
     def action_path
-      "/finances/dres/#{@resource.id}"
+      "/finances/dres"
     end
   end
+
 end
 

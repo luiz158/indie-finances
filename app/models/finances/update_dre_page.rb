@@ -1,5 +1,5 @@
 module Finances
-  class UpdateDreVO
+  class UpdateDrePage
     extend ActiveSupport::Concern
     include ActiveModel::Validations
     include ActiveModel::Conversion

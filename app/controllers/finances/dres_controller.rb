@@ -1,29 +1,29 @@
 module Finances
   class DresController < ApplicationController
     def index
-      @index = IndexDreVO.new
+      @index = IndexDrePage.new
     end
 
     def show
-      @show = DreVO.new(params)
+      @show = DrePage.new(params)
     end
 
     def new
-      @resource = NewDreVO.new
+      @resource = NewDrePage.new
     end
 
     def edit
-      @resource = EditDreVO.new(params)
+      @resource = EditDrePage.new(params)
     end
 
     def create
-      @dre = CreateDreVO.new(params)
+      @dre = CreateDrePage.new(params)
 
       redirect_to dres_path(@dre, notice: 'Dre was successfully created.')
     end
 
     def update
-      @dre = UpdateDreVO.new(params)
+      @dre = UpdateDrePage.new(params)
 
       redirect_to dres_path(@dre, notice: 'Dre was successfully updated.')
     end

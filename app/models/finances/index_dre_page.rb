@@ -1,16 +1,16 @@
 module Finances
-  class IndexDreVO
+  class IndexDrePage
 
     attr_accessor :dres
 
     def initialize
-      @dres = IndexDreVO.all
+      @dres = IndexDrePage.all
     end
 
     def self.all
       dres = []
       Dre.all.each do |dre|
-        dres << DreVO.new({:id => dre.id })
+        dres << DrePage.new({:id => dre.id })
       end
       dres
     end

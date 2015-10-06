@@ -1,6 +1,6 @@
 module Finances
 
-  class NewDreVO
+  class NewDrePage
 
     extend ActiveSupport::Concern
     include ActiveModel::Validations

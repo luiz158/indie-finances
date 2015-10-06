@@ -1,5 +1,5 @@
 module Finances
-  class DreVO
+  class DrePage
 
     extend ActiveModel::Naming
     include DreAttributes
