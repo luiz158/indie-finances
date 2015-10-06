@@ -24,7 +24,8 @@ module Finances
     end
 
     def current
-      @report = ReportPage.new
+      @current = ReportPage.new
+      render :layout => false
     end
 
   end
