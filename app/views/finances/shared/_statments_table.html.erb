@@ -1,0 +1,21 @@
+<table class="styled">
+   <tr>
+    <% statement.attributes.each do |attributes| %>
+      <th><%= attributes.values.first %></th>
+    <% end %>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% statement.dres.each do |dre| %>
+  <tr>
+    <% dre.attributes.each do |attribute| %>
+      <td><%= dre.send(attribute.keys.first) %></td>
+    <% end %>
+    <td><%= link_to 'Show', dre_path(dre.id) %></td>
+    <td><%= link_to 'Edit', edit_dre_path(dre.id) %></td>
+    <td><%= link_to 'Destroy', dre_path(dre.id), confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>

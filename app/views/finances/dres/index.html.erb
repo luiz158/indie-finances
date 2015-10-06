@@ -1,27 +1,6 @@
 <h1>Desmonstrativo de Resultados do Exercício</h1>
 
-<table class="styled">
-   <tr>
-    <% @index.attributes.each do |attributes| %>
-      <th><%= attributes.values.first %></th>
-    <% end %>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @index.dres.each do |dre| %>
-  <tr>
-    <% dre.attributes.each do |attribute| %>
-      <td><%= dre.send(attribute.keys.first) %></td>
-    <% end %>
-    <td><%= link_to 'Show', dre_path(dre.id) %></td>
-    <td><%= link_to 'Edit', edit_dre_path(dre.id) %></td>
-    <td><%= link_to 'Destroy', dre_path(dre.id), confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
-</table>
-
+<%= render "finances/shared/statments_table", :statement => @index  %>
 <br />
 
 <%= link_to 'New Dre', new_dre_path %>
