@@ -18,5 +18,11 @@ module Finances
     def attributes
       DreAttributes.dre_fields | DreAttributes.extra_fields
     end
+
+    BLACK_LIST = %w{zencoder_dollars heroku_dollars amazon_dollars}
+
+    def report_attributes
+      attributes.reject { |attr| BLACK_LIST.include?(attr.keys.first) }
+    end
   end
 end

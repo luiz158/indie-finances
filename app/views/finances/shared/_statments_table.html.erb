@@ -1,14 +1,14 @@
 <table class="table table-bordered table-striped">
-  <caption>Demonstrativo de Resultads do exercício</caption>
+  <caption>Demonstrativo de Resultados do exercício</caption>
   <tr>
-    <% statement.attributes.each do |attributes| %>
+    <% statement.report_attributes.each do |attributes| %>
       <th><%= attributes.values.first %></th>
     <% end %>
   </tr>
 
   <% statement.dres.each do |dre| %>
     <tr>
-      <% dre.attributes.each do |attribute| %>
+      <% statement.report_attributes.each do |attribute| %>
         <td><%= dre.send(attribute.keys.first) %></td>
       <% end %>
     </tr>
