@@ -19,7 +19,7 @@ module Finances
     end
 
     def show
-      @report = Report.find(params[:id])
+      @report = Report.find_by_name(params[:id])
       render(:text => @report.snapshot)
     end
 
