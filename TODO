@@ -7,3 +7,7 @@ renomear o DRE
 adcionar me e ano ao income_statement (para facilitar leitura quando for contatenar o balanço)
 ids nas tabelas né
 implementar rotas com relatorios
+retirar flash messages
+mostraro relatorion no new
+name do report nao deve ser editável
+
