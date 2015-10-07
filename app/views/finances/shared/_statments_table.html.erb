@@ -1,21 +1,26 @@
-<table class="styled">
-   <tr>
+<table class="table table-bordered table-striped">
+  <caption>Demonstrativo de Resultads do exercício</caption>
+  <tr>
     <% statement.attributes.each do |attributes| %>
       <th><%= attributes.values.first %></th>
     <% end %>
-    <th></th>
-    <th></th>
-    <th></th>
+      <% unless current_page?(:controller => "reports", :action => "current") %>
+      <th></th>
+      <th></th>
+      <th></th>
+    <% end %>
   </tr>
 
-<% statement.dres.each do |dre| %>
-  <tr>
-    <% dre.attributes.each do |attribute| %>
-      <td><%= dre.send(attribute.keys.first) %></td>
-    <% end %>
-    <td><%= link_to 'Show', dre_path(dre.id) %></td>
-    <td><%= link_to 'Edit', edit_dre_path(dre.id) %></td>
-    <td><%= link_to 'Destroy', dre_path(dre.id), confirm: 'Are you sure?', method: :delete %></td>
-  </tr>
-<% end %>
+  <% statement.dres.each do |dre| %>
+    <tr>
+      <% dre.attributes.each do |attribute| %>
+        <td><%= dre.send(attribute.keys.first) %></td>
+      <% end %>
+      <% unless current_page?(:controller => "reports", :action => "current") %>
+        <td><%= link_to 'Show', dre_path(dre.id) %></td>
+        <td><%= link_to 'Edit', edit_dre_path(dre.id) %></td>
+        <td><%= link_to 'Destroy', dre_path(dre.id), confirm: 'Are you sure?', method: :delete %></td>
+      <% end %>
+    </tr>
+  <% end %>
 </table>
