@@ -4,9 +4,7 @@
     <th>Data</th>
     <th>Valor</th>
     <th>Descrição</th>
-      <% unless current_page?(:controller => "reports", :action => "current") %>
-      <th></th>
-    <% end %>
+    <th></th>
   </tr>
   <% balance.rows.each do |row| %>
     <tr>
@@ -19,13 +17,10 @@
       <td>
         <%= row[:description] %>
       </td>
-      <% unless current_page?(:controller => "reports", :action => "current") %>
-        <td>
-          <% if row[:kind] == "entry" %>
-            <%= link_to 'Remover', entry_path(row[:id]), confirm: 'Are you sure?', method: :delete %>
-          <% end %>
-        </td>
-      <% end %>
+      <td>
+        <% if row[:kind] == "entry" %>
+          <%= link_to 'Remover', entry_path(row[:id]), confirm: 'Are you sure?', method: :delete %>
+        <% end %>
     </tr>
   <% end %>
 </table>

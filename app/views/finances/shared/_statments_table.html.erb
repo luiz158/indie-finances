@@ -4,11 +4,9 @@
     <% statement.attributes.each do |attributes| %>
       <th><%= attributes.values.first %></th>
     <% end %>
-      <% unless current_page?(:controller => "reports", :action => "current") %>
-      <th></th>
-      <th></th>
-      <th></th>
-    <% end %>
+    <th></th>
+    <th></th>
+    <th></th>
   </tr>
 
   <% statement.dres.each do |dre| %>
@@ -16,11 +14,9 @@
       <% dre.attributes.each do |attribute| %>
         <td><%= dre.send(attribute.keys.first) %></td>
       <% end %>
-      <% unless current_page?(:controller => "reports", :action => "current") %>
-        <td><%= link_to 'Show', dre_path(dre.id) %></td>
-        <td><%= link_to 'Edit', edit_dre_path(dre.id) %></td>
-        <td><%= link_to 'Destroy', dre_path(dre.id), confirm: 'Are you sure?', method: :delete %></td>
-      <% end %>
+      <td><%= link_to 'Show', dre_path(dre.id) %></td>
+      <td><%= link_to 'Edit', edit_dre_path(dre.id) %></td>
+      <td><%= link_to 'Destroy', dre_path(dre.id), confirm: 'Are you sure?', method: :delete %></td>
     </tr>
   <% end %>
 </table>
