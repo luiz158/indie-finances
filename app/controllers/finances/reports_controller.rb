@@ -11,7 +11,7 @@ module Finances
 
     def create
       @report = Report.new(params[:report])
-      @current = ReportPage.new
+      @current = ReportPage.new(@report)
       @report.snapshot = render_to_string("current", :layout => "report")
       @report.save
 
@@ -21,11 +21,6 @@ module Finances
     def show
       @report = Report.find(params[:id])
       render(:text => @report.snapshot)
-    end
-
-    def current
-      @current = ReportPage.new
-      render :layout => "report"
     end
 
   end

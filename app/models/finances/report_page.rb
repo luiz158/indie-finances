@@ -3,8 +3,11 @@
 module Finances
   class ReportPage
 
-    def text
-      "Este Mês o resultado foi bom."
+    attr_accessor :title, :description
+
+    def initialize(report)
+      @description = report.description
+      @title = report.title
     end
 
     def statements
