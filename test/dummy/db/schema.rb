@@ -38,9 +38,12 @@ ActiveRecord::Schema.define(:version => 20151006124209) do
   end
 
   create_table "finances_reports", :force => true do |t|
-    t.string "name"
-    t.string "description"
-    t.text   "snapshot"
+    t.string   "name"
+    t.string   "description"
+    t.text     "snapshot"
+    t.string   "title"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

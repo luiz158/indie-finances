@@ -4,6 +4,8 @@ class CreateReportsTable < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.text :snapshot
+      t.string :title
+      t.timestamps
     end
   end
 end
