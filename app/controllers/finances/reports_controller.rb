@@ -13,9 +13,11 @@ module Finances
       @report = Report.new(params[:report])
       @current = ReportPage.new(@report)
       @report.snapshot = render_to_string("current", :layout => "report")
-      @report.save
-
+      if @report.save
       redirect_to reports_path
+      else
+        render "new"
+      end
     end
 
     def show
