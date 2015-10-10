@@ -9,7 +9,7 @@ module Finances
 
     def self.all
       dres = []
-      Dre.all.each do |dre|
+      Dre.order("created_at").all.each do |dre|
         dres << DrePage.new({:id => dre.id })
       end
       dres
