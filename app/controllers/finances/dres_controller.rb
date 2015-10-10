@@ -20,14 +20,14 @@ module Finances
       @dre = CreateDrePage.new(params)
       @dre.save
 
-      redirect_to dres_path(@dre)
+      redirect_to dres_path
     end
 
     def update
       @dre = UpdateDrePage.new(params)
       @dre.save
 
-      redirect_to dres_path(@dre)
+      redirect_to dres_path
     end
 
     def destroy
