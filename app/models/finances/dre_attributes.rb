@@ -30,7 +30,7 @@ module Finances
        { "zencoder_reais" => "Zencoder (R$)" },
        { "heroku_dollars" => "Heroku ($)" },
        { "heroku_reais" => "Heroku (R$)" },
-       { "pagseguro" => "pagSeguro" },
+       { "pagseguro" => "PagSeguro" },
        { "paypal" => "Paypal" },
        { "amazon_dollars" => "Amazon ($)" },
        { "amazon_reais" => "Amazon (R$)" },
