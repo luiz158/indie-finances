@@ -5,7 +5,7 @@
   Relatório Financeiro Mensal
 </h2>
 <p>
-<%= raw @current.description.gsub("\n","<br>") %>
+<%= @current.description %>
 </p>
 
 <%= render "finances/shared/statments_table", :statement => @current.statements %>

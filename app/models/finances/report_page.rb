@@ -3,11 +3,17 @@
 module Finances
   class ReportPage
 
-    attr_accessor :title, :description
+    attr_accessor :title
+
+    include ActionView::Helpers::OutputSafetyHelper
 
     def initialize(report)
       @description = report.description
       @title = report.title
+    end
+
+    def description
+      raw @description.gsub("\n","<br>")
     end
 
     def statements
