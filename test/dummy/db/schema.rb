@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(:version => 20151006124209) do
     t.integer  "amazon_reais"
     t.integer  "paypal"
     t.integer  "revenues"
+    t.integer  "year"
+    t.integer  "month"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

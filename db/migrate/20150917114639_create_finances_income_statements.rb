@@ -15,6 +15,9 @@ class CreateFinancesIncomeStatements < ActiveRecord::Migration
       t.integer :paypal
       t.integer :revenues
 
+      t.integer :year
+      t.integer :month
+
       t.timestamps
     end
   end
