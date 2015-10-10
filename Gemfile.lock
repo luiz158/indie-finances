@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    finances (0.0.9)
+    finances (0.0.11)
       jquery-rails
       rails (~> 3.1.0)
 
