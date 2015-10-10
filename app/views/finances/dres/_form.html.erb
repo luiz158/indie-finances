@@ -18,10 +18,8 @@
   <br>
   <% @resource.dre_fields.each do |attribute| %>
     <div class="field">
-      <%= f.label attribute.values.first.to_sym %><br />
-      <% if attribute.keys.first == "name" %>
-        <%= f.text_field  attribute.keys.first.to_sym %>
-      <% else %>
+      <% unless attribute.keys.first == "name" %>
+        <%= f.label attribute.values.first.to_sym %><br />
         <%= f.text_field  attribute.keys.first.to_sym, :class => "currency" %>
       <% end %>
     </div>

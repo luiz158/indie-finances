@@ -19,6 +19,12 @@ module Finances
       @resource.id
     end
 
+    def save
+      I18n.locale = 'pt-BR'
+      @resource.name = I18n.l("#{@resource.year}-#{@resource.month}-01".to_date, :format => "%B") + "/" + @resource.year.to_s
+      @resource.save
+    end
+
     def persisted?
       true
     end

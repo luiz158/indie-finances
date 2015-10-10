@@ -13,12 +13,17 @@ module Finances
     include Commom
 
     def initialize(params)
-      @resource = Dre.new
-      @resource.update_attributes(sanitized_params(params[:dre]))
+      @resource = Dre.new(sanitized_params(params[:dre]))
     end
 
     def persisted?
       false
+    end
+
+    def save
+      I18n.locale = 'pt-BR'
+      @resource.name = I18n.l("#{@resource.year}-#{@resource.month}-01".to_date, :format => "%B") + "/" + @resource.year.to_s
+      @resource.save
     end
 
     def errors
