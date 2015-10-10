@@ -17,6 +17,14 @@ module Finances
       @resource.id
     end
 
+    def month
+      @resource.month
+    end
+
+    def year
+      @resource.year
+    end
+
     def persisted?
       true
     end

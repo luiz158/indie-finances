@@ -15,6 +15,14 @@ module Finances
       @resource = Dre.new
     end
 
+    def month
+      @resource.month
+    end
+
+    def year
+      @resource.year
+    end
+
     def persisted?
       false
     end

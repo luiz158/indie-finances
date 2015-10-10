@@ -11,6 +11,11 @@
     </div>
   <% end %>
 
+<h4>Referente a</h4>
+  <%= f.select(:year, 2013..2025) %>
+  <%= f.select(:month, 1..12) %>
+  <br>
+  <br>
   <% @resource.dre_fields.each do |attribute| %>
     <div class="field">
       <%= f.label attribute.values.first.to_sym %><br />
