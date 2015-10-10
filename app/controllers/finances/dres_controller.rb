@@ -19,13 +19,13 @@ module Finances
     def create
       @dre = CreateDrePage.new(params)
 
-      redirect_to dres_path(@dre, notice: 'Dre was successfully created.')
+      redirect_to dres_path(@dre)
     end
 
     def update
       @dre = UpdateDrePage.new(params)
 
-      redirect_to dres_path(@dre, notice: 'Dre was successfully updated.')
+      redirect_to dres_path(@dre)
     end
 
     def destroy
