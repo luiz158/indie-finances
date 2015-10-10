@@ -7,6 +7,7 @@ module Finances
 
     def new
       @report = Report.new
+      @current = ReportPage.new(@report)
     end
 
     def create

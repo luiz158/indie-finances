@@ -2,4 +2,7 @@
 
 <%= render 'form' %>
 
+<%= render "finances/shared/statments_table", :statement => @current.statements %>
+<%= render "finances/shared/entries_table", :balance => @current.balance %>
+
 <%= link_to 'Back', reports_path %>
