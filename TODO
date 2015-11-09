@@ -3,5 +3,7 @@ Mecanismo para adicioanr titulos humanos às colunas
 tira o if do form
 passar conf do controller para o host app?
 remover a necessidade de usar app_name nos controllers do host
-adcionar me e ano ao income_statement (para facilitar leitura quando for contatenar o balanço)
-
+adcionar mes e ano ao income_statement (para facilitar leitura quando for contatenar o balanço)
+ordenar entries por ordem de criação
+aumentar o espaço da descrição do relatorio na view
+eliminar a necessidade de copiar o report.html, custom.css e bootstrap.css, ou automatizar isso.
