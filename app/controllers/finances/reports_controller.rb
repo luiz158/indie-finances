@@ -2,7 +2,7 @@ module Finances
   class ReportsController < ApplicationController
 
     def index
-      @reports = Report.all
+      @reports = Report.order('created_at ASC').all
     end
 
     def new
